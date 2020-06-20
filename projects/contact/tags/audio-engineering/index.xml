@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audio Engineering on Daniel Dominguez Chavez</title>
+    <link>https://d9dch.github.io/Daniel_Chavez/tags/audio-engineering/</link>
+    <description>Recent content in Audio Engineering on Daniel Dominguez Chavez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://d9dch.github.io/Daniel_Chavez/tags/audio-engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Capstone: Machine Learning for Active Shooter events</title>
+      <link>https://d9dch.github.io/Daniel_Chavez/projects/_machine-learning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://d9dch.github.io/Daniel_Chavez/projects/_machine-learning/</guid>
+      <description>Project Specifications Some Notes about capstone This project was built mainly using Python, Python packages, Tensoflow and Raspberry Pi. All students in the Electrical Engineering program at Texas A&amp;amp;M must complete a sponsored 2 semester capstone program. This is a very involved program usually involving 30-40 hrs of work each week. Each week included constant reporting to supervisors, oral presentations, and laboratory work. While the project is a group project, here I talk about my work on the project, and I how I helped the other members when needed.</description>
+    </item>
+    
+  </channel>
+</rss>
