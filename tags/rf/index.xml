@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RF on Daniel Dominguez Chavez</title>
+    <link>https://github.com/d9dch/Daniel_Chavez/tags/rf/</link>
+    <description>Recent content in RF on Daniel Dominguez Chavez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://github.com/d9dch/Daniel_Chavez/tags/rf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Microstrip Simulation</title>
+      <link>https://github.com/d9dch/Daniel_Chavez/projects/_microstrip_simulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/d9dch/Daniel_Chavez/projects/_microstrip_simulation/</guid>
+      <description>Project Specifications This is a MATLAB and MATLAB app builder project. It was part of ECEN 445, an elective course in Applied Electromagnetics.
+The mathematical concept is an exercise in recursive methods. There is a layout of nodes on an X and Y plane. The Z plane is the measure of Potential in volts.
+In the middle, there is a simulated microstrip line that reaches about halfway into the viewable area.</description>
+    </item>
+    
+  </channel>
+</rss>

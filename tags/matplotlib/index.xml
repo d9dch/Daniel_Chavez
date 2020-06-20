@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matplotlib on Daniel Dominguez Chavez</title>
+    <link>https://github.com/d9dch/Daniel_Chavez/tags/matplotlib/</link>
+    <description>Recent content in Matplotlib on Daniel Dominguez Chavez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://github.com/d9dch/Daniel_Chavez/tags/matplotlib/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Traffic Stop Racial and Gender Bias in Texas</title>
+      <link>https://github.com/d9dch/Daniel_Chavez/projects/traffic_stop_gender_bias/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://github.com/d9dch/Daniel_Chavez/projects/traffic_stop_gender_bias/</guid>
+      <description>Project Specifications This was the midterm project for a class on Computational Data Science taught by Dr. Jin Tao, a Data Science Guru and excellent researcher at Texas A&amp;amp;M.
+As someone who has personally been affected by both systemic and explicit racism, I chose this project with a real interest in the finds. The goal of this project was to identify biases in policing during traffic stops during 2010-2016 in TEXAS.</description>
+    </item>
+    
+  </channel>
+</rss>
