@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Solar Power: Linear Regression Utility - Daniel Dominguez Chavez</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Solar Power: Linear Regression Utility">
+<meta itemprop="description" content="Using Python&#39;s GUI builder and Tensorflow to make ML accessible. Creating a tool to estimate the effect of Solar Panel installations">
+
+<meta itemprop="wordCount" content="1220">
+<meta itemprop="image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/solar_panel_cover.jfif">
+
+
+
+<meta itemprop="keywords" content="TensorFlow,Keras,Python,JupyterLab,Pandas," /><meta property="og:title" content="Solar Power: Linear Regression Utility" />
+<meta property="og:description" content="Using Python&#39;s GUI builder and Tensorflow to make ML accessible. Creating a tool to estimate the effect of Solar Panel installations" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://d9dch.github.io/Daniel_Chavez/projects/solar_linear_regression/" />
+<meta property="og:image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/solar_panel_cover.jfif" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/solar_panel_cover.jfif"/>
+
+<meta name="twitter:title" content="Solar Power: Linear Regression Utility"/>
+<meta name="twitter:description" content="Using Python&#39;s GUI builder and Tensorflow to make ML accessible. Creating a tool to estimate the effect of Solar Panel installations"/>
+<link rel="stylesheet" href="https://d9dch.github.io/Daniel_Chavez/css/bundle.min.759e3848ea529eef056dab665b241e2af569e601ab80f68f8d4a4d002a155dd4.css" integrity="sha256-dZ44SOpSnu8FbatmWyQeKvVp5gGrgPaPjUpNACoVXdQ="><link rel="stylesheet" href="https://d9dch.github.io/Daniel_Chavez/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="https://d9dch.github.io/Daniel_Chavez/" class="nav">
+        
+          
+            projects
+          
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          
+            <a href="https://d9dch.github.io/Daniel_Chavez/" class="nav link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://d9dch.github.io/Daniel_Chavez/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://d9dch.github.io/Daniel_Chavez/projects/" class="nav link"><i class='far fa-newspaper'></i> Projects</a>
+          
+        
+      
+        
+          
+          
+            <a href="https://d9dch.github.io/Daniel_Chavez/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+          
+        
+      
+      <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/es" lang="es" class="nav no-lang link">Española (es)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
+      
+    
+      
+        <a href="https://d9dch.github.io/Daniel_Chavez/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="https://d9dch.github.io/Daniel_Chavez/"><img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/headshot_front.jpg" class="circle" width="" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Daniel Dominguez Chavez</h1>
+  </header>
+  <main>
+    <p>Electrical Engineering Senior at Texas A&M</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="https://d9dch.github.io/Daniel_Chavez/projects/solar_linear_regression/">Solar Power: Linear Regression Utility</a></h2>
+    
+    
+      <p>Using Python&#39;s GUI builder and Tensorflow to make ML accessible. Creating a tool to estimate the effect of Solar Panel installations</p>
+    
+  </div>
+  <div class="meta">
+    
+    <time class="published" datetime="0001-01-01 00:00:00 &#43;0000 UTC">
+          DOCUMENT LENGTH
+    </time>
+    <span class="author"></span>
+    
+      <p>6 minute read</p>
+    
+  </div>
+</header>
+
+    <section id="socnet-share">
+      
+
+
+
+
+
+    </section>
+    
+  <a href="https://d9dch.github.io/Daniel_Chavez/projects/solar_linear_regression/" class="image featured">
+    
+      <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/solar_panel_cover.jfif" alt="">
+    
+  </a>
+
+
+    <div class="content">
+      <h2 id="project-specifications">Project Specifications</h2>
+<p>This was an completely optional  project for the  Data Science for Energy and Power class at Texas A&amp;M. In addition to machine learning, this class focused on time predictive techniques and methodology such as <strong>ARMA</strong>, <strong>SVD</strong>, and <strong>K-means</strong>.</p>
+<p>As many consumers begin to move to solar, it is hard to accurately measure the impact of number of panels vs the environmental benefits a solar array create. Many companies might stretch the truth about efficacy, while others may be more conservative in their estimates.</p>
+<p>Therefore, the goal was to create a predictive model, that taking an input of solar panels to be installed (consumer panels have a standard size), could predict the carbon offset in metric tons of an installation. The model get&rsquo;s its prediction not by some set formula, but from a trained linear regression on the data provided by <strong>Google&rsquo;s Project Sunroof</strong></p>
+<p>A secondary goal was to make this prediction tool user friendly, which involved creating a GUI that would allow anyone to see a predictions.</p>
+<h2 id="process">Process</h2>
+<p>The first process is to obtain the data and to extrapolate the things that I need. Here is a snippet of original table. It is organized by city.</p>
+<table>
+<thead>
+<tr>
+<th>region_name</th>
+<th>state_name</th>
+<th>lat_max</th>
+<th>lat_min</th>
+<th>lng_max</th>
+<th>lng_min</th>
+<th>lat_avg</th>
+<th>lng_avg</th>
+<th>yearly_sunlight_kwh_kw_threshold_avg</th>
+<th>count_qualified</th>
+<th>percent_covered</th>
+<th>percent_qualified</th>
+<th>number_of_panels_n</th>
+<th>number_of_panels_s</th>
+<th>number_of_panels_e</th>
+<th>number_of_panels_w</th>
+<th>number_of_panels_f</th>
+<th>number_of_panels_median</th>
+<th>number_of_panels_total</th>
+<th>kw_median</th>
+<th>kw_total</th>
+<th>yearly_sunlight_kwh_n</th>
+<th>yearly_sunlight_kwh_s</th>
+<th>yearly_sunlight_kwh_e</th>
+<th>yearly_sunlight_kwh_w</th>
+<th>yearly_sunlight_kwh_f</th>
+<th>yearly_sunlight_kwh_median</th>
+<th>yearly_sunlight_kwh_total</th>
+<th>carbon_offset_metric_tons</th>
+<th>existing_installs_count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NULL</td>
+<td>Pennsylvania</td>
+<td>40.70188</td>
+<td>40.61294</td>
+<td>-75.4622</td>
+<td>-75.5461</td>
+<td>40.65035</td>
+<td>-75.4958</td>
+<td>985.15</td>
+<td>7673</td>
+<td>98.72285</td>
+<td>84.84078</td>
+<td>39701</td>
+<td>113097</td>
+<td>83193</td>
+<td>87582</td>
+<td>203964</td>
+<td>32</td>
+<td>527537</td>
+<td>8</td>
+<td>131884.3</td>
+<td>10025162</td>
+<td>35149706</td>
+<td>23041858</td>
+<td>24541877</td>
+<td>59927475</td>
+<td>9215.539</td>
+<td>1.53E+08</td>
+<td>97025.99</td>
+<td>11</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>32.55156</td>
+<td>32.54226</td>
+<td>-116.92</td>
+<td>-117.03</td>
+<td>32.54845</td>
+<td>-116.957</td>
+<td>1300.5</td>
+<td>2</td>
+<td>100</td>
+<td>66.66667</td>
+<td>13</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>13</td>
+<td>31</td>
+<td>3.25</td>
+<td>7.75</td>
+<td>4745.559</td>
+<td>7692.078</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>5209.465</td>
+<td>12437.64</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Aberdeen</td>
+<td>North Carolina</td>
+<td>35.18396</td>
+<td>35.05361</td>
+<td>-79.3885</td>
+<td>-79.5383</td>
+<td>35.1436</td>
+<td>-79.4247</td>
+<td>1083.75</td>
+<td>1078</td>
+<td>86.0984</td>
+<td>71.62791</td>
+<td>3248</td>
+<td>16681</td>
+<td>13821</td>
+<td>12775</td>
+<td>92404</td>
+<td>38</td>
+<td>138929</td>
+<td>9.5</td>
+<td>34732.25</td>
+<td>916858.5</td>
+<td>5550471</td>
+<td>4255421</td>
+<td>3855701</td>
+<td>30274566</td>
+<td>11665.38</td>
+<td>44853017</td>
+<td>26330.81</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Abilene</td>
+<td>Texas</td>
+<td>32.61433</td>
+<td>32.23666</td>
+<td>-99.5896</td>
+<td>-100.086</td>
+<td>32.43502</td>
+<td>-99.7507</td>
+<td>1252.411</td>
+<td>42802</td>
+<td>97.87507</td>
+<td>93.67504</td>
+<td>172303</td>
+<td>586619</td>
+<td>403010</td>
+<td>557991</td>
+<td>1718095</td>
+<td>42</td>
+<td>3438018</td>
+<td>10.5</td>
+<td>859504.5</td>
+<td>56039759</td>
+<td>2.34E+08</td>
+<td>1.4E+08</td>
+<td>2.04E+08</td>
+<td>6.44E+08</td>
+<td>15695.83</td>
+<td>1.28E+09</td>
+<td>621366.8</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+<p>First, I got rid of all of the null, and pulled the two columns I was interested in&hellip; <em>number_of_panels_total</em> and <em>carbon_offset_metric_tons</em>. I retrospect, I should have checked to see how many nulls ther were, and if this was an appropriate measure to take.</p>
+<table>
+<thead>
+<tr>
+<th>number_of_panels_total</th>
+<th>carbon_offset_metric_tons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>527537</td>
+<td>97025.99147</td>
+</tr>
+<tr>
+<td>31</td>
+<td>0</td>
+</tr>
+<tr>
+<td>138929</td>
+<td>26330.80621</td>
+</tr>
+<tr>
+<td>3438018</td>
+<td>621366.8494</td>
+</tr>
+<tr>
+<td>175853</td>
+<td>21479.14411</td>
+</tr>
+<tr>
+<td>170469</td>
+<td>31333.36638</td>
+</tr>
+<tr>
+<td>31219</td>
+<td>6075.026699</td>
+</tr>
+</tbody>
+</table>
+<p>I plot this against each-other to see the relationship (cover picture)
+<figure>
+    <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/panelvcarbon.png"/> <figcaption>
+            <h4>Relationship between number of panels and carbon offset.</h4>
+        </figcaption>
+</figure>
+
+It should be shown in the graph, but carbon offset is in metric tons.</p>
+<h4 id="the-model">The model</h4>
+<p>Using these two columns, I used Numpy, Keras, and TensorFlow to create a linear regression model. The code below is almost guided by the TF docs. It probably would have had an easier implementation just making my own, but the benefit of this code is that you could associate on output with multiple inputs, which again, I really didn&rsquo;t need.</p>
+<pre><code>import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+import tensorflow_docs as tfdocs
+import tensorflow_docs.modeling
+
+import tensorflow_docs.plots
+from tensorflow.keras.models import load_model
+
+#import the data from an excel/csv file
+myFile  = pd.read_csv(r'E:\Daniel\Documents\_TAMU\_SPRING 2020\ECEN_489_POWER\_Solar_Project\city.csv', encoding = 'utf-8')
+#turn the imported data into a dataframe
+df1 = pd.DataFrame(myFile)
+
+#extract the carbon offset datak
+carbon_offset = df1[['carbon_offset_metric_tons']]
+#extract the region data
+region = df1[['region_name']]
+#extract the number of panels
+panels = df1[['number_of_panels_total']]
+
+
+# combine carbon offset and panel data, drop nan columns
+data_set = pd.concat([panels,carbon_offset], axis = 1)
+data_set = data_set.dropna()
+
+#Split the data
+train_dataset = data_set.sample(frac=.8, random_state=0)
+test_dataset = data_set.drop(train_dataset.index)
+
+
+#set carbon offset as the Y output
+Y_train = train_dataset.pop('carbon_offset_metric_tons')
+Y_test = test_dataset.pop('carbon_offset_metric_tons')
+
+#normalization
+norm_train_dataset = (train_dataset-train_dataset.mean())/train_dataset.std()
+norm_test_datatest = (test_dataset-train_dataset.mean())/train_dataset.std()
+norm_Y_train = (Y_train-Y_train.mean())/Y_train.std()
+norm_Y_test = (Y_test-Y_test.mean())/Y_test.std()
+
+
+print(&quot;mean X = &quot; + str(train_dataset['number_of_panels_total'].mean()))
+print(&quot;std X = &quot; + str(train_dataset['number_of_panels_total'].std()))
+
+print(&quot;std Y= &quot; +  str(Y_train.std()) )
+print(&quot;mean Y= &quot; +  str(Y_train.mean()) )
+
+plt.scatter(data_set[['number_of_panels_total']], data_set[['carbon_offset_metric_tons']])
+plt.title('panels vs. carbon offset')
+plt.ylabel('carbon_offset')
+plt.xlabel('number of panels')
+plt.savefig('panels_v_carbon.png')
+plt.show()
+
+print(train_dataset.head(10))
+#MODEL DEFINITIONS
+def build_model():
+  model = tf.keras.models.Sequential([
+    tf.keras.layers.Dense(64, activation='relu', input_shape=[len(train_dataset.keys())]),
+    tf.keras.layers.Dense(64, activation='relu'),
+    tf.keras.layers.Dense(1)
+  ])
+
+  optimizer = tf.keras.optimizers.RMSprop(0.001) #learning rate
+
+  model.compile(loss='mse',
+                optimizer=optimizer,
+                metrics=['mae','mse'])
+  return model
+
+model = build_model()#build the structure of the model
+
+
+
+EPOCHS = 1000 #train the model 1000 iterations
+stop_training = keras.callbacks.EarlyStopping(monitor='val_loss', patience=50)
+
+history = model.fit(
+  norm_train_dataset, norm_Y_train,
+  epochs=EPOCHS, validation_split = 0.2, verbose=0,
+  callbacks=[stop_training, tfdocs.modeling.EpochDots()])
+
+#model.save('solar_model.h5')
+
+#evaluate the model using the testing set
+loss, mae, mse= model.evaluate(norm_test_datatest,norm_Y_test,verbose=2)
+print(str(mae))
+
+#use history function to plot accuracy
+train_acc = history.history['mae']
+val_acc = history.history['val_mae']
+
+epochs = range(len(train_acc))
+
+plt.plot(epochs, train_acc, 'r', label='Mean Absolute Error')
+plt.title('Error Decrease per Epoch')
+plt.legend(loc=0)
+plt.xlabel('Epochs')
+plt.ylabel('MAE')
+plt.savefig('Loss_Metrics.png')
+plt.show()
+
+
+
+</code></pre><h4 id="the-gui">The GUI</h4>
+<p>Once I had the produced h5 model, I used Tkinter to create the python application.</p>
+<figure>
+    <img src="https://d9dch.github.io/Daniel_Chavez/img/solar_overview.png"/> <figcaption>
+            <h4>Overview of Solar Panel app</h4>
+        </figcaption>
+</figure>
+
+<pre><code>from tkinter import *
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+import tensorflow_docs as tfdocs
+import tensorflow_docs.modeling
+import tensorflow_docs.plots
+
+#Import the script for loading a module
+from load_model import load_solar_model
+#The input from user requires some preprocessing
+def prep_user_input(txt_in):
+    txt_cleaned = ''.join(i for i in txt_in if (i.isdigit() or i == '.'))
+
+    try:
+        new_text = float(txt_cleaned)
+    except ValueError:
+        print('ERROR: Please enter a real numerical value!')
+    predict_input = np.array([new_text])
+    predict_input = predict_input[:1]
+
+    # print(predict_input)
+    return predict_input, txt_cleaned
+
+
+#make all of my fonts the same
+myfont = &quot;Circular Std bold&quot;
+#Where is the model currently saved
+mypath = 'E:\Daniel\Documents\_TAMU\_SPRING 2020\ECEN_489_POWER\_Solar_Project\CodeFiles\solar_model.h5'
+
+#open the main window loop
+window = Tk()
+window.title(&quot;Solar Panels Carbon Offset Estimation App&quot;)
+#window.geometry('700x700')
+
+#BUTTON CLICKED ACTION
+def run_prediction():
+    #when button is clicked, gather what was in the text field
+    number_of_panels = txt.get()
+
+    #prep it through formatting for loading to the machine learning model
+    predict_input, txt_cleaned = prep_user_input(number_of_panels)
+
+    #show the formatted array input to the user
+    b.configure(text=&quot;Calculating Carbon Offset for: &quot; + txt_cleaned + &quot; panels&quot;) #change text to calulating
+    print(predict_input)
+
+    #send it to load_model for evaluating
+    out_prediction = load_solar_model(predict_input, mypath)
+
+    #Show the prediction
+    pred_txt.configure(text = 'Predicted Carbon Offset(metric tons): ' + np.array2string(out_prediction))
+    #.....
+
+
+#DECRIPTIVE TEXT
+b = Label(window, text ='Enter number of solar panels:', font=(myfont,10))
+b.grid(column=1, row=0)
+
+#TEXT INPUT
+txt = Entry(window, width = 50)
+txt.grid(column= 1, row = 1)
+
+#MAIN CALCULATE BUTTON
+calculate_btn = Button(window, text = &quot;PREDICT&quot;, command = run_prediction, font=(myfont,10))
+calculate_btn.grid(column = 1, row = 2)
+
+#SHOW THE OUTPUT FOR GIVEN PREDICTION
+pred_txt = Label(window, text ='Predicted carbon offset: ', font = (myfont,10))
+pred_txt.grid(column = 1, row = 3)
+
+window.mainloop()
+</code></pre><pre><code>import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import load_model
+
+import tensorflow_docs as tfdocs
+import tensorflow_docs.modeling
+import tensorflow_docs.plots
+
+def load_solar_model(number_panels, myPath):
+    #load saved model
+    carbon_model = load_model(myPath)
+    #evaluate input into your model
+    est_carbon_offset = carbon_model.predict(number_panels)
+    return est_carbon_offset
+
+#This will go into further parameters
+#file path is user determined
+# filepath = 'E:\Daniel\Documents\_TAMU\_SPRING 2020\ECEN_489_POWER\_Solar_Project\CodeFiles\solar_model.h5'
+# number_panels = np.array([.3])
+# cb_off = load_solar_model(number_panels[:1], filepath)
+
+# print(number_panels)
+# print(str(cb_off))
+</code></pre><p><figure>
+    <img src="https://d9dch.github.io/Daniel_Chavez/img/UI_before.JPG"/> <figcaption>
+            <h4>GUI before entry</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="https://d9dch.github.io/Daniel_Chavez/img/UI_after.JPG"/> <figcaption>
+            <h4>GUI after entry</h4>
+        </figcaption>
+</figure>
+</p>
+<h4 id="conclusion">Conclusion</h4>
+<p>Using MAE as our loss value because the values were so large MSE might be a bad measure, we reached 92% accuracy or 8% MAE. Generally, the project was a success. In the future I would like to develop this further for municipalities that may be looking at solar power.</p>
+
+
+    </div>
+    <footer>
+      <ul class="stats">
+  <li class="categories">
+    <ul>
+    
+      
+        
+          <li><a class="article-terms-link" href="https://d9dch.github.io/Daniel_Chavez/categories/academic-project/">Academic Project</a></li>
+        
+      
+    
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+    
+      
+        
+          <li><a class="article-terms-link" href="https://d9dch.github.io/Daniel_Chavez/tags/tensorflow/">TensorFlow</a></li>
+        
+          <li><a class="article-terms-link" href="https://d9dch.github.io/Daniel_Chavez/tags/keras/">Keras</a></li>
+        
+          <li><a class="article-terms-link" href="https://d9dch.github.io/Daniel_Chavez/tags/python/">Python</a></li>
+        
+          <li><a class="article-terms-link" href="https://d9dch.github.io/Daniel_Chavez/tags/jupyterlab/">JupyterLab</a></li>
+        
+          <li><a class="article-terms-link" href="https://d9dch.github.io/Daniel_Chavez/tags/pandas/">Pandas</a></li>
+        
+      
+    
+    </ul>
+  </li>
+</ul>
+
+    </footer>
+  </article>
+
+  <div class="pagination">
+  
+    <a href="https://d9dch.github.io/Daniel_Chavez/projects/traffic_stop_gender_bias/" class="button"><div class="previous"><div>Traffic Stop Racial and Gender Bias in Texas</div></div></a>
+  
+  
+    <a href="https://d9dch.github.io/Daniel_Chavez/projects/microstrip_simulation/" class="button"><div class="next"><div>Microstrip Simulation</div></div></a>
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent posts</h1>
+      </header>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://d9dch.github.io/Daniel_Chavez/projects/machine-learning/" class="image featured">
+    
+      <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/guitar_sound.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="https://d9dch.github.io/Daniel_Chavez/projects/machine-learning/">Capstone: Machine Learning for Active Shooter events</a></h2>
+          <time class="published" datetime="">DOCUMENT LENGTH</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://d9dch.github.io/Daniel_Chavez/projects/molecule_linear_regression/" class="image featured">
+    
+      <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/chemical_compound.JPG" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="https://d9dch.github.io/Daniel_Chavez/projects/molecule_linear_regression/">Coulomb Force predictions from chemical makeup</a></h2>
+          <time class="published" datetime="">DOCUMENT LENGTH</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://d9dch.github.io/Daniel_Chavez/projects/microstrip_simulation/" class="image featured">
+    
+      <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/Microstrip.jpg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="https://d9dch.github.io/Daniel_Chavez/projects/microstrip_simulation/">Microstrip Simulation</a></h2>
+          <time class="published" datetime="">DOCUMENT LENGTH</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://d9dch.github.io/Daniel_Chavez/projects/solar_linear_regression/" class="image featured">
+    
+      <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/solar_panel_cover.jfif" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="https://d9dch.github.io/Daniel_Chavez/projects/solar_linear_regression/">Solar Power: Linear Regression Utility</a></h2>
+          <time class="published" datetime="">DOCUMENT LENGTH</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+        <section>
+          
+  <a href="https://d9dch.github.io/Daniel_Chavez/projects/traffic_stop_gender_bias/" class="image featured">
+    
+      <img src="https://d9dch.github.io/Daniel_Chavez/img/new_images/police_car.jpeg" alt="">
+    
+  </a>
+
+
+        </section>
+        <header>
+          <h2><a href="https://d9dch.github.io/Daniel_Chavez/projects/traffic_stop_gender_bias/">Traffic Stop Racial and Gender Bias in Texas</a></h2>
+          <time class="published" datetime="">DOCUMENT LENGTH</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="https://d9dch.github.io/Daniel_Chavez/projects/" class="button">See more</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+      <section id="categories">
+        <header>
+          <h1><a href="https://d9dch.github.io/Daniel_Chavez/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="https://d9dch.github.io/Daniel_Chavez/categories/academic-project/">academic-project<span class="count">5</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>From small town Texas to Big Data dreams...</p>
+      <footer>
+        <a href="https://d9dch.github.io/Daniel_Chavez/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    
+      &copy; 1
+      
+        Daniel Dominguez Chavez
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.72.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="https://d9dch.github.io/Daniel_Chavez/js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script><script src="https://d9dch.github.io/Daniel_Chavez/js/bundle.min.3141835966110421d714b3bac0fc1c18912b8f3f6ce56dc0f8fc705f4e0c166b.js" integrity="sha256-MUGDWWYRBCHXFLO6wPwcGJErjz9s5W3A&#43;PxwX04MFms="></script>
+    <script src="https://d9dch.github.io/Daniel_Chavez/js/add-on.js"></script>
+    </div>
+  </body>
+</html>
