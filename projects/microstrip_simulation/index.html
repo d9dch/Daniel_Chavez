@@ -87,38 +87,6 @@
     
       
     
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/es" lang="es" class="nav no-lang link">Española (es)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
-      
-    
   
 </menu>
 
@@ -149,7 +117,7 @@
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -161,21 +129,7 @@
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -189,7 +143,21 @@
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
     </footer>
@@ -240,8 +208,8 @@
       <h2 id="project-specifications">Project Specifications</h2>
 <p>This is a MATLAB and MATLAB app builder project. It was part of ECEN 445, an elective course in Applied Electromagnetics.</p>
 <p>The mathematical concept is an exercise in recursive methods. There is a layout of nodes on an X and Y plane. The Z plane is the measure of Potential in volts.</p>
-<p>In the middle, there is a simulated microstrip line that reaches about halfway into the viewable area. That theoretical line is of width 0 and has a 1 volt current running through it.</p>
-<p>There is a perfect conductor wall the surrounds the area of study. The voltage of these wall is 0.</p>
+<p>In the middle, there is a simulated microstrip line that reaches about halfway into the viewable area. That theoretical line is of width 0 and has a 1-volt current running through it.</p>
+<p>There is a perfect conductor wall the surrounds the area of study. The voltage of this wall is 0.</p>
 <p>The Requirements:</p>
 <ul>
 <li>
@@ -253,8 +221,8 @@
 </ul>
 <h2 id="process">Process</h2>
 <h4 id="back-end">Back-End</h4>
-<p>The voltage value of each node is affected by the nodes around it, described by an equation that contains the last value of the current node, and the current values of the nodes around it. Therefore this equation was put into a MATLAB script, and called upon when needed. Note that this equation needs multiple iterations before a minimal difference is observed.</p>
-<p>I wrapped that equation inside a function for calling as needed. Then with given inputs, I first create a grid, then use said equation to update the nodes from top left to bottom right.</p>
+<p>The voltage value of each node is affected by the nodes around it, described by an equation that contains the last value of the current node, and the current values of the nodes around it. Therefore this equation was put into a MATLAB script and called upon when needed. Note that this equation needs multiple iterations before a minimal difference is observed.</p>
+<p>I wrapped that equation inside a function for calling as needed. Then with given inputs, I first create a grid, then use the said equation to update the nodes from top left to bottom right.</p>
 <pre><code>function [countIter, alpha, omega, cap] = FDSOR_Generation(a,b,d,w,n_a,n_b,e_r,threeD)
     %% SET PARAMETERS
     %Let's use a common denominator of 6 for d
@@ -534,7 +502,7 @@
     end
 end
 </code></pre><h4 id="front-end">Front-End</h4>
-<p>Using MATLAB&rsquo;s app builder and API like interface, I created an interface for a user to custom make a simulation. The main challenge was connecting this to script that actually ran the simulation. Secondary, but still as difficult was making sure that the user ran the program correctly. To do this, I used button locks, indicator lights, warning messages, prompts and more to make it as easy as possible.</p>
+<p>Using MATLAB&rsquo;s app builder and API like interface, I created an interface for a user to custom make a simulation. The main challenge was connecting this to the script that ran the simulation. Secondary, but still as difficult was making sure that the user ran the program correctly. To do this, I used button locks, indicator lights, warning messages, prompts, and more to make it as easy as possible.</p>
 <p>I also stuck to a linear methodology of design, meaning I directed the user linearly. Finally, once a simulation was started, I indicated how many iterations were done, and the current tolerance level as a way of indicating how long it might run. Tolerance in this case meaning the biggest change that was made from one iteration to another from all the nodes. Once this was less than .001 Volts, the simulation was finished.</p>
 <figure>
     <img src="https://d9dch.github.io/Daniel_Chavez/img/microstrip_UI.JPG"/> <figcaption>
@@ -752,7 +720,7 @@ end
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -764,21 +732,7 @@ end
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -792,7 +746,21 @@ end
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
   

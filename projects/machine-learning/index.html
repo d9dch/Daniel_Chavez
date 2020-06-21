@@ -9,7 +9,7 @@
 <meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Capstone: Machine Learning for Active Shooter events">
 <meta itemprop="description" content="Using Batch Spectrograms and Image Recognition">
 
-<meta itemprop="wordCount" content="2077">
+<meta itemprop="wordCount" content="2059">
 <meta itemprop="image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/guitar_sound.jpg">
 <meta itemprop="image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/sys_over.jpg">
 
@@ -89,38 +89,6 @@
     
       
     
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/es" lang="es" class="nav no-lang link">Española (es)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
-      
-    
   
 </menu>
 
@@ -151,7 +119,7 @@
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -163,21 +131,7 @@
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -191,7 +145,21 @@
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
     </footer>
@@ -241,9 +209,9 @@
     <div class="content">
       <h2 id="project-specifications">Project Specifications</h2>
 <h4 id="some-notes-about-capstone">Some Notes about capstone</h4>
-<p>This project was built mainly using Python, Python packages, Tensoflow and Raspberry Pi. All students in the Electrical Engineering program at Texas A&amp;M must complete a sponsored 2 semester capstone program. This is a very involved program usually involving 30-40 hrs of work each week. Each week included constant reporting to supervisors, oral presentations, and laboratory work. While the project is a group project, here I talk about my work on the project, and I how I helped the other members when needed. I received no help on the audio processing or machine learning aspects of this project.</p>
+<p>This project was built mainly using Python, Python packages, TensorFlow, and Raspberry Pi. All students in the Electrical Engineering program at Texas A&amp;M must complete a sponsored 2-semester capstone program. This is a very involved program usually involving 30-40 hrs of work each week. Each week included constant reporting to supervisors, oral presentations, and laboratory work. While the project is a group project, here I talk about my work on the project, and how I helped the other members when needed. I received no help with the machine learning aspects of this project.</p>
 <h4 id="fsr-functional-system-requirements">FSR (Functional System Requirements)</h4>
-<p>This is a shortened list, since the actual FSR is over 20 pages long. I also list the FSR of the other components since it is relevant to how I work with other systems.</p>
+<p>This is a shortened list since the actual FSR is over 20 pages long. I also list the FSR of the other components since it is relevant to how I work with other systems.</p>
 <p>There were 3 members and therefore 3 main subsystems.</p>
 <ul>
 <li>Machine Learning Inference System</li>
@@ -267,11 +235,11 @@
 
 <h2 id="research">Research</h2>
 <h4 id="data-collection">Data collection</h4>
-<p>My sponsor used the UMK-1 microphone to record gunfire at a local gun-range with various kinds of weapons. The reason that UMK-1 was chosen was because of its higher recording Frequency response compared to other usb plug in microphones.</p>
-<p>This batch of .wav files, was then combined with a large open source of .wav files which was an accumulation of &ldquo;loud&rdquo; sounds. I say &ldquo;loud&rdquo; because there was not a defined limit as to what &ldquo;loud&rdquo; meant.</p>
+<p>My sponsor used the UMK-1 microphone to record gunfire at a local gun-range with various kinds of weapons. The reason that UMK-1 was chosen was because of its higher recording Frequency response compared to other USB plugs in microphones.</p>
+<p>This batch of .wav files was then combined with a large open-source of .wav files which were an accumulation of &ldquo;loud&rdquo; sounds. I say &ldquo;loud&rdquo; because there was not a defined limit as to what &ldquo;loud&rdquo; meant.</p>
 <h4 id="the-model">The Model</h4>
 <p>The next step was to pick a model for audio inference. Here we had to make a tough choice. Unlike common Linear Regressions, Audio has interesting constraints. For starters, it has more dimensionality, which restricts augmentation. How do you skew, flip, or stretch Audio without losing temporal fidelity?</p>
-<p>The LSTM( Long and Short Term Memory) or BERT(Bidirectional Encoder Representation) are likely better suited to string and Natural Language Processing. But, due to time and frankly skill concerns, we decided to use a CNN image recognition model using batch spectrogram to convert a time based .wav file, to a pixel + color based .jpg image. In the end we went with a slightly modified VGG 16 Image Classification model.</p>
+<p>The LSTM( Long and Short Term Memory) or BERT(Bidirectional Encoder Representation) is likely better suited to string and Natural Language Processing. But, due to time and frankly skill concerns, we decided to use a CNN image recognition model using a batch spectrogram to convert a time based .wav file, to a pixel + color-based .jpg image. In the end, we went with a slightly modified VGG 16 Image Classification model.</p>
 <figure>
     <img src="https://d9dch.github.io/Daniel_Chavez/img/vgg16.jpg"/> <figcaption>
             <h4>VGG-16 Architecture: Our input sizes were slightly different, but the layers were organized like above</h4>
@@ -279,10 +247,10 @@
 </figure>
 
 <h2 id="process">Process</h2>
-<h4 id="data-manipulation-and-the-batch-sprectrogram">Data Manipulation and the Batch Sprectrogram</h4>
+<h4 id="data-manipulation-and-the-batch-spectrogram">Data Manipulation and the Batch Spectrogram</h4>
 <p>Any good Data Scientist knows that preparation is 90% of the game, so I spent quite a bit of time arranging, labeling, and cleaning the data.</p>
-<p>In order to train a VGG-16 there needs to be well defined classes. The open source sound data we chose came with .wav files with names such as &ldquo;10120.wav&rdquo;. This number is associated with a row value of the &ldquo;1&rdquo; column from an included .csv file. That same row tells you much more detailed information such as the sound source. There were around 10k samples total of various lengths.</p>
-<p>To accomplish the goal of organizing all of the files. I had to change the format of the wav file to &ldquo;sound_source + sample_number . wav&rdquo;. As an example &ldquo;10022.wav&rdquo; is actually &ldquo;Acoustic_guitar_22.wav&rdquo;(this is the actual image in the header of the article). This was accomplished using Pandas. With Pandas you can easily and non-recursively extract information into &ldquo;column&rdquo; based structures(i.e. DataFrames).</p>
+<p>To train a VGG-16 there needs to be well-defined classes. The open-source sound data we chose came with .wav files with names such as &ldquo;10120.wav&rdquo;. This number is associated with a row value of the &ldquo;1&rdquo; column from an included .csv file. That same row tells you much more detailed information such as the sound source. There were around 10k samples a total of various lengths.</p>
+<p>To accomplish the goal of organizing all of the files. I had to change the format of the .wav file to &ldquo;sound_source + sample_number.wav&rdquo;. As an example &ldquo;10022.wav&rdquo; is actually &ldquo;Acoustic_guitar_22.wav&rdquo;(this is the actual image in the header of the article). This was accomplished using Pandas. With Pandas, you can easily and non-recursively extract information into &ldquo;column&rdquo; based structures(i.e. DataFrames).</p>
 <pre><code>#in what directory are our audio files?
 path = './Ambient_Audio'
 path_csv = './Ambient_Audio/_test_post_competition_scoring_clips.csv'
@@ -295,7 +263,7 @@ df2 = df[['label','fname']]
 print(df.head())
 print(df2.head())
 
-</code></pre><p>Once I had all of the &ldquo;correct&rdquo; names stored in a DataFrame, I used Librosa to convert all of the images into batch spectrogram form. Batch Spectrograms allow you to have time, power, and frequency information in one picture.</p>
+</code></pre><p>Once I had all of the &ldquo;correct&rdquo; names stored in a DataFrame, I used Librosa to convert all of the images into batch spectrograms form. Batch Spectrograms allow you to have time, power, and frequency information in one picture.</p>
 <figure>
     <img src="https://d9dch.github.io/Daniel_Chavez/img/120mel.jpg"/> <figcaption>
             <h4>MEL Spectrogram: This picture is a long timeline of multiple weapon shots</h4>
@@ -310,7 +278,7 @@ for i in range(len(audio_files)): #replace with length of
     #where y is an array representing the audio time series
     #where sr is the sampling rate and a scalar
 
-    #to find the magnitude spectogram S    
+    #to find the magnitude spectrogram S    
     S = lr.feature.melspectrogram(y=y, sr=sr)
     #extracts all of the mfcc from y and the sample rate
     #Takes the fast fourier transform I believe?
@@ -338,15 +306,15 @@ for i in range(len(audio_files)): #replace with length of
     #add a title
 </code></pre><h4 id="training-on-super-computer-clusters">Training on Super Computer Clusters</h4>
 <p>No worries, the following sections are not nearly as long as the data manipulation sections.</p>
-<p>Through my sponsor, I was able to gain access to the Olympus supercomputing clusters at A&amp;M in order to Train my model. The classes were chosen as:</p>
+<p>Through my sponsor, I was able to gain access to the Olympus supercomputing clusters at A&amp;M to Train my model. The classes were chosen as:</p>
 <ul>
 <li>multiple_gunshots</li>
 <li>not_gunshots</li>
 <li>single_shots</li>
 </ul>
-<p>Because my model has RGB coloring, it is helpful to normalize data in order to prevent huge networks, which may or may not converge. The images were normalized from ~ 900x1400 px to 244px by 159px. Basically, I used matplotlib to scale down the image to as small as I could make it before I felt the images were too similar.</p>
+<p>Because my model has RGB coloring, it is helpful to normalize data to prevent huge networks, which may or may not converge. The images were normalized from ~ 900x1400 px to 244px by 159px. I used matplotlib to scale down the image to as small as I could make it before I felt the images were too similar.</p>
 <p>Finally,  I submitted everything in SLURM batch job files to Texas A&amp;M, after installing all of the dependencies in my virtual python environment. There was a lot of obscure Linux to get everything to run, but in a few words, it was simply installing all dependencies and praying you didn&rsquo;t mess up the batch file. It took a few tries before I understood the cluster.</p>
-<p>At this point(Spring 2020), I had completed several ML projects already, so I had no issues with setting up or using TF(Tensorflow) or Keras. Below is just the layer and deployement code of one of the scripts.</p>
+<p>At this point(Spring 2020), I had completed several ML projects already, so I had no issues with setting up or using TF(Tensorflow) or Keras. Below is just the layer and deployment code of one of the scripts.</p>
 <pre><code>model = tf.keras.models.Sequential([
     #Convolution and Max Pooling Layers
     tf.keras.layers.Conv2D(64, (3,3), activation = 'relu', input_shape = (244, 159, 3)),
@@ -399,12 +367,12 @@ checkpoint = ModelCheckpoint(&quot;404_ver1_best_model.h5&quot;,monitor='loss', 
 history = model.fit_generator(train_generator, epochs=1, validation_data = validation_generator, verbose = 1, callbacks = [checkpoint])
 
 
-#Save the weights and biases of trained model
+#Save the weights and biases of the trained model
 model.save(&quot;404ver1.h5&quot;)
 </code></pre><h5 id="model-layers-organized-the-classes-file-tree-by-hand">Model Layers: organized the classes&rsquo; file tree by hand.</h5>
 <h4 id="integration-into-an-sbc">Integration into an SBC</h4>
 <p>Generally, unless you have particular needs, the model weights and biases are saved to an &ldquo;.h5&rdquo; file. Once saved, this file can be used to pass appropriate inputs and predict a class. The problem for us was how to extract this prediction information &ldquo;real-time&rdquo;, and then display the prediction to an end user live constantly. And, to do this processing on a RPi4(Raspberry Pi 4)</p>
-<p>To do this I generated a script that constantly makes predictions in 3 second intervals. Although this is not an ideal &ldquo;live prediction&rdquo; it was the best we could do with our power constraints on the RPi4.</p>
+<p>To do this I generated a script that constantly makes predictions in 3-second intervals. Although this is not an ideal &ldquo;live prediction&rdquo; it was the best we could do with our power constraints on the RPi4.</p>
 <figure>
     <img src="https://d9dch.github.io/Daniel_Chavez/img/ML_Inferance.jpeg"/> <figcaption>
             <h4>Continuous Prediction Loop: All the above are in a single script </h4>
@@ -515,8 +483,8 @@ for i in range(0,5):
 </figure>
 
 <h2 id="results">Results</h2>
-<p>As a group we scored an 89%, mainly because they have a policy of not giving As unless the project is sold to a company. As for the ML here are the metrics. The truth is more data and cleaner data is needed. Because of University and Safety policies we only collected around 100 or so samples of gunfire. Therefore the model had trouble finding patterns converging to gunshot classification. Although a high accuracy is shown, it is highly skewed by the not gunshot class. Simply put, I should have trained either on LSTM or by only having single shots as my only class.</p>
-<p>Also unfortunate, Covid-19 interfered with finishing the project completely. Mainly this hindered mounting the system on a rover and transmitting information OTA(Over the Air)  through Bluetooth. When progress was cancelled, everything was &ldquo;hardwired&rdquo; still.</p>
+<p>As a group, we scored an 89%, mainly because they have a policy of not giving As unless the project is sold to a company. As for the ML here are the metrics. The truth is more data and cleaner data is needed. Because of University and Safety policies we only collected around 100 or so samples of gunfire. Therefore the model had trouble finding patterns converging to gunshot classification. Although a high accuracy is shown, it is highly skewed by the not gunshot class. Simply put, I should have trained either on LSTM or by only having single shots as my only class.</p>
+<p>Also unfortunate, Covid-19 interfered with finishing the project. Mainly this hindered mounting the system on a rover and transmitting information OTA(Over the Air)  through Bluetooth. When progress was canceled, everything was &ldquo;hardwired&rdquo; still.</p>
 <figure>
     <img src="https://d9dch.github.io/Daniel_Chavez/img/ML_Metrics.jpg"/> <figcaption>
             <h4>Metrics: Includes loss value checkpoints </h4>
@@ -524,7 +492,7 @@ for i in range(0,5):
 </figure>
 
 <h4 id="conclusion">Conclusion</h4>
-<p>In general terms, this is the project I am most proud of. And as it is my capstone, a high point in my college education. Using the latest technology in bleeding edge labs at Texas A&amp;M is always a pleasure. I would like to thank my for now unnamed sponsor, Samuel Beauchamp and Jacob Beckham for being amazing partners.</p>
+<p>In general terms, this is the project I am most proud of. And as it is my capstone, a high point in my college education. Using the latest technology in bleeding-edge labs at Texas A&amp;M is always a pleasure. I would like to thank my, for now, unnamed sponsor, Samuel Beauchamp, and Jacob Beckham for being amazing partners.</p>
 
 
     </div>
@@ -722,7 +690,7 @@ for i in range(0,5):
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -734,21 +702,7 @@ for i in range(0,5):
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -762,7 +716,21 @@ for i in range(0,5):
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
   

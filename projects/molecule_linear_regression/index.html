@@ -9,7 +9,7 @@
 <meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Coulomb Force predictions from chemical makeup">
 <meta itemprop="description" content="Python, Pandas, and Chemistry Project">
 
-<meta itemprop="wordCount" content="454">
+<meta itemprop="wordCount" content="455">
 <meta itemprop="image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/chemical_compound.JPG">
 
 
@@ -87,38 +87,6 @@
     
       
     
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/es" lang="es" class="nav no-lang link">Española (es)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
-      
-    
   
 </menu>
 
@@ -149,7 +117,7 @@
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -161,21 +129,7 @@
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -189,7 +143,21 @@
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
     </footer>
@@ -238,9 +206,9 @@
 
     <div class="content">
       <h2 id="project-details">Project Details</h2>
-<p>This is the final project for ECEN 489, an elective course in Computational Data Science. This class in taught by Dr. Jin Tao, and incredible researcher at the high computing center at Texas A&amp;M.</p>
-<p>Measurements at the atomic level are incredibly difficult, but of extreme relevance in the study of material sciences. One of the fundamental Measurements is that of Coulomb Force. It is an equation that gives you total force of 2 electrical charges affecting each other. It is straight forward for 2 atoms, but increases in difficulty exponentially in 3D space and with multiple atoms in a molecule.</p>
-<p>The question was then, if we could create a prediction of total coulomb force based exclusively on the atomic formula of a molecule. This maybe wouldn&rsquo;t be as accurate, but it may allow predictions for molecules so large and complex it is prohibitive to measure.</p>
+<p>This is the final project for ECEN 489, an elective course in Computational Data Science. This class is taught by Dr. Jin Tao, and incredible researcher at the high computing center at Texas A&amp;M.</p>
+<p>Measurements at the atomic level are incredibly difficult, but of extreme relevance in the study of material sciences. One of the fundamental Measurements is that of the Coulomb Force. It is an equation that gives you a total force of 2 electrical charges affecting each other. It is straight forward for 2 atoms but increases in difficulty exponentially in 3D space and with multiple atoms in a molecule.</p>
+<p>The question was then if we could create a prediction of total Coulomb force, based exclusively on the atomic formula of a molecule. This maybe wouldn&rsquo;t be as accurate, but it may allow predictions for molecules so large and complex it is prohibitive to measure.</p>
 <h2 id="process">Process</h2>
 <p>The first process is to visualize and understand the data. I used the PUBCHEM website to check my work and to obtain the data of simple molecules. The data was presented in <strong>JSON</strong>, and I used <strong>Pandas</strong> to import the data into DataFrames and extract what I needed. I then had to use a massive amount of string operators to create an XYZ file, which describes the chemical makeup of the molecule.</p>
 <table>
@@ -390,9 +358,9 @@
 </tbody>
 </table>
 <p>Once I had the XYZ data, I used called PC3 to view individual molecules to check against the PubChem data.</p>
-<p>With this Data, I can use an equation known as the coulomb matrix equation to coulomb to create a matrix that represents the forces between in all of the atoms in a molecule. I then use the XYZ data I pulled to find if there was a comparison.</p>
+<p>With this Data, I can use an equation known as the Coulomb matrix equation to coulomb to create a matrix that represents the forces between in all of the atoms in a molecule. I then use the XYZ data I pulled to find if there was a comparison.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Ultimately, we ran out of time to complete a machine learning model, but this was a still pretty intense exercise in python and pandas. However it is worth noting that there didn&rsquo;t seem to be a direct connection from chemical makeup, to coulomb force in a conventional correlation measurement. However, this was a project where I was able to pull data from a complex data set, clean it, and use operators to convert it into a file to be used by an open source program.</p>
+<p>Ultimately, we ran out of time to complete a machine learning model, but this was a still pretty intense exercise in python and pandas. However, it is worth noting that there didn&rsquo;t seem to be a direct connection from chemical makeup, to Coulomb force in a conventional correlation measurement. However, this was a project where I was able to pull data from a complex data set, clean it, and use operators to convert it into a file to be used by an open-source program.</p>
 
 
     </div>
@@ -580,7 +548,7 @@
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -592,21 +560,7 @@
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -620,7 +574,21 @@
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
   

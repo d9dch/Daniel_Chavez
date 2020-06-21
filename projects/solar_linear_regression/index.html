@@ -9,7 +9,7 @@
 <meta name="generator" content="Hugo 0.72.0" /><meta itemprop="name" content="Solar Power: Linear Regression Utility">
 <meta itemprop="description" content="Using Python&#39;s GUI builder and Tensorflow to make ML accessible. Creating a tool to estimate the effect of Solar Panel installations">
 
-<meta itemprop="wordCount" content="1220">
+<meta itemprop="wordCount" content="1221">
 <meta itemprop="image" content="https://d9dch.github.io/Daniel_Chavez/img/new_images/solar_panel_cover.jfif">
 
 
@@ -87,38 +87,6 @@
     
       
     
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/es" lang="es" class="nav no-lang link">Española (es)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (zh-cn)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (zh-tw)</a>
-      
-    
-      
-        <a href="https://d9dch.github.io/Daniel_Chavez/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
-      
-    
   
 </menu>
 
@@ -149,7 +117,7 @@
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -161,21 +129,7 @@
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -189,7 +143,21 @@
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
     </footer>
@@ -238,12 +206,12 @@
 
     <div class="content">
       <h2 id="project-specifications">Project Specifications</h2>
-<p>This was an completely optional  project for the  Data Science for Energy and Power class at Texas A&amp;M. In addition to machine learning, this class focused on time predictive techniques and methodology such as <strong>ARMA</strong>, <strong>SVD</strong>, and <strong>K-means</strong>.</p>
-<p>As many consumers begin to move to solar, it is hard to accurately measure the impact of number of panels vs the environmental benefits a solar array create. Many companies might stretch the truth about efficacy, while others may be more conservative in their estimates.</p>
-<p>Therefore, the goal was to create a predictive model, that taking an input of solar panels to be installed (consumer panels have a standard size), could predict the carbon offset in metric tons of an installation. The model get&rsquo;s its prediction not by some set formula, but from a trained linear regression on the data provided by <strong>Google&rsquo;s Project Sunroof</strong></p>
-<p>A secondary goal was to make this prediction tool user friendly, which involved creating a GUI that would allow anyone to see a predictions.</p>
+<p>This was a completely optional project for the  Data Science for Energy and Power class at Texas A&amp;M. In addition to machine learning, this class focused on time predictive techniques and methodology such as <strong>ARMA</strong>, <strong>SVD</strong>, and <strong>K-means</strong>.</p>
+<p>As many consumers begin to move to solar, it is hard to accurately measure the impact of the number of panels vs the environmental benefits a solar array creates. Many companies might stretch the truth about efficacy, while others may be more conservative in their estimates.</p>
+<p>Therefore, the goal was to create a predictive model, that taking an input of solar panels to be installed (consumer panels have a standard size), could predict the carbon offset in metric tons of an installation. The model gets its prediction not by some set formula, but from a trained linear regression on the data provided by <strong>Google&rsquo;s Project Sunroof</strong></p>
+<p>A secondary goal was to make this prediction tool user friendly, which involved creating a GUI that would allow anyone to see predictions.</p>
 <h2 id="process">Process</h2>
-<p>The first process is to obtain the data and to extrapolate the things that I need. Here is a snippet of original table. It is organized by city.</p>
+<p>The first process is to obtain the data and to extrapolate the things that I need. Here is a snippet of the original table. It is organized by cities.</p>
 <table>
 <thead>
 <tr>
@@ -410,7 +378,7 @@
 </tr>
 </tbody>
 </table>
-<p>First, I got rid of all of the null, and pulled the two columns I was interested in&hellip; <em>number_of_panels_total</em> and <em>carbon_offset_metric_tons</em>. I retrospect, I should have checked to see how many nulls ther were, and if this was an appropriate measure to take.</p>
+<p>First, I got rid of all of the nulls and pulled the two columns I was interested in&hellip; <em>number_of_panels_total</em> and <em>carbon_offset_metric_tons</em>. I retrospect, I should have checked to see how many nulls there were, and if this was an appropriate measure to take.</p>
 <table>
 <thead>
 <tr>
@@ -456,9 +424,9 @@
         </figcaption>
 </figure>
 
-It should be shown in the graph, but carbon offset is in metric tons.</p>
+It should be shown in the graph, but the carbon offset is in metric tons.</p>
 <h4 id="the-model">The model</h4>
-<p>Using these two columns, I used Numpy, Keras, and TensorFlow to create a linear regression model. The code below is almost guided by the TF docs. It probably would have had an easier implementation just making my own, but the benefit of this code is that you could associate on output with multiple inputs, which again, I really didn&rsquo;t need.</p>
+<p>Using these two columns, I used Numpy, Keras, and TensorFlow to create a linear regression model. The code below is almost guided by the TF docs. It probably would have had an easier implementation just making my own, but the benefit of this code is that you could associate on output with multiple inputs, which again, I didn&rsquo;t need.</p>
 <pre><code>import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -696,7 +664,7 @@ def load_solar_model(number_panels, myPath):
 </figure>
 </p>
 <h4 id="conclusion">Conclusion</h4>
-<p>Using MAE as our loss value because the values were so large MSE might be a bad measure, we reached 92% accuracy or 8% MAE. Generally, the project was a success. In the future I would like to develop this further for municipalities that may be looking at solar power.</p>
+<p>Using MAE as our loss value because the values were so large MSE might be a bad measure, we reached 92% accuracy or 8% MAE. Generally, the project was a success. In the future, I would like to develop this further for municipalities that may be looking at solar power.</p>
 
 
     </div>
@@ -888,7 +856,7 @@ def load_solar_model(number_panels, myPath):
       <ul class="socnet-icons">
         
 
-        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+        <li><a href="//github.com/d9dch" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
 
 
 
@@ -900,21 +868,7 @@ def load_solar_model(number_panels, myPath):
 
 
 
-<li><a href="//linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+<li><a href="//linkedin.com/in/danieldominguezchavez/" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
 
 
 
@@ -928,7 +882,21 @@ def load_solar_model(number_panels, myPath):
 
 
 
-<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </ul>
   

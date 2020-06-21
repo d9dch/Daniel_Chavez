@@ -1,49 +1,125 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/en/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/fr/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/pl/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/pt/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/de/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/es/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/zh-cn/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/zh-tw/sitemap.xml</loc>
-		
-	</sitemap>
-	
-	<sitemap>
-	   	<loc>https://d9dch.github.io/Daniel_Chavez/ja/sitemap.xml</loc>
-		
-	</sitemap>
-	
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/categories/academic-project/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/audio-engineering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/projects/machine-learning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/chemistry/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/projects/molecule_linear_regression/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/electromagnetics/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/embedded/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/gui/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/index/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/json/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/jupyterlab/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/keras/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/matlab/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/matplotlib/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/projects/microstrip_simulation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/pandas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/python/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/rf/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/rpi4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/projects/solar_linear_regression/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/teensy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/tags/tensorflow/</loc>
+  </url>
+  
+  <url>
+    <loc>https://d9dch.github.io/Daniel_Chavez/projects/traffic_stop_gender_bias/</loc>
+  </url>
+  
+</urlset>
